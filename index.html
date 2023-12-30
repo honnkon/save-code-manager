@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>セーブコードマネージャー</title>
+    <link rel="stylesheet" href="/site/style.css">
+    <link rel="icon" href="/site/Logo.png" sizes="32x32">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>セーブコードマネージャー</h1>
+    <div id="LeftSpace">
+       <header>
+            <ol id="Breadcrumb">
+                <li><a href="/site">トップページ</a></li>
+                <li>セーブコードマネージャ</li>
+            </ol>
+            <noscript title="JavaScriptをオンにしてください。">このWebページはJavascriptを使用しています。</noscript>
+        </header>
+        <main>
+            <h2>閲覧</h2>
+            <form name="view">
+                <label>閲覧コード：<input id="show_showcode" type="text" required/></label>
+                <br/>
+                <input type="submit" value="閲覧"/>
+                <br/>
+                <textarea class="noresize" id="get_savedata" readonly rows="5" cols="20">ここにセーブコードが表示されます。「テスト」と閲覧コードに入力すれば、正しく動くかテストできます。</textarea>
+            </form>
+            <hr/>
+            <h2>保存</h2>
+            <form name="save">
+                <label>閲覧コード：　<input id="save_showcode" type="text" required/></label>
+                <br/>
+                <label>セーブコード：<input id="save_savecode" required/></label>
+                <br/>
+                <label>パスワード：　<input id="save_password" type="password" required/></label>
+                <br/>
+                <span class="small">パスワードはセーブコードを新たなデータにするのに利用できます。パスワードを変更することは今のところできません。</span>
+                <br/>
+                <input type="submit" value="保存"/>
+                <br/>
+                <span id="save_response"></span>
+            </form>
+            <hr/>
+            <h2>変更</h2>
+            <form name="change">
+                <label>閲覧コード：　　　　<input id="change_showcode" type="text" required/></label>
+                <br/>
+                <label>新しいセーブコード：<input id="change_savecode" required/></label>
+                <br/>
+                <label>パスワード：　　　　<input id="change_password" type="password" required/></label>
+                <br/>
+                <span class="small">登録時に使用したパスワードを入力してください。パスワードを変更することは今のところできません。</span>
+                <br/>
+                <input type="submit" value="変更"/>
+                <br/>
+                <span id="change_response"></span>
+            </form>
+        </main>
+    </div>
+    <footer>
+        &copy; 2023 honnkon All rights reserved.
+    </footer>
+</body>
+</html>
