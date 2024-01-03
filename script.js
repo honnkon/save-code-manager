@@ -42,7 +42,7 @@ $(function() {
                 } else if(json.message == "There is a same data"){
                     $("#save_response").text("同じ閲覧コードがあります。別のコードを入力してください。");
                 } else {
-                    $("#save_response").html(`成功しました。↓共有用<br/><textarea readonly>閲覧コード：${$("#save_showcode").val()}\nこれは、パスワードマネージャー（https://honnkon.github.io/save-code-manager/）で利用できるコードです。</textarea>`);
+                    $("#save_response").html(`成功しました。↓共有用<br/><textarea readonly>閲覧コード：${$("#save_showcode").val()}\nこれは、パスワードマネージャー（https://sites.google.com/view/honnkon/save-code-manager）で利用できるコードです。</textarea>`);
                 }
             });
         })
